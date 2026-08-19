@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@layer components {
+  .btn {
+    @apply py-2 px-4 rounded-full hover:bg-sky-100 transition-colors duration-300;
+  }
+
+  .navRows {
+    @apply w-full block text-blue-950 py-2.5 px-8 font-bold ;
+  }
+  
+}
+
+@theme {
+  --breakpoint-bp: 1020px;
+}
+
+@layer base {
+  hr {
+    @apply border-0 h-px bg-white/85 ;
+  }
+}
