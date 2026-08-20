@@ -5,18 +5,22 @@
     @apply py-2 px-4 rounded-full hover:bg-sky-100 transition-colors duration-300;
   }
 
-  .navRows {
-    @apply w-full block text-blue-950 py-2.5 px-8 font-bold ;
+  .navigation-rows {
+    @apply w-full block text-blue-950 py-2.5 px-8 font-bold;
   }
-  
+
+  .image-section1 {
+    @apply absolute inset-0 w-full h-full object-contain transition-transform duration-700 h-80;
+  }
 }
 
 @theme {
   --breakpoint-bp: 1020px;
+  --breakpoint-img-sec1: 531px;
 }
 
 @layer base {
   hr {
-    @apply border-0 h-px bg-white/85 ;
+    @apply border-0 h-px bg-white/85;
   }
 }
