@@ -85,14 +85,18 @@
             </div>
           </div>
 
-          <div class="flex flex-col w-full py-5 px-5 mx-4 text-xl">
-            <button class="py-2 px-10 w-full text-center bg-blue-900 text-black rounded-full">Start for free</button>
+          <div class="flex flex-col gap-2 w-full py-5 px-5 text-xl">
+            <button class="py-2 px-10 w-full text-center bg-blue-900 text-white rounded-full">Start for free</button>
 
             <button class="py-2 px-10 w-full text-center bg-white text-blue-900 rounded-full">Login</button>
           </div>
         </nav>
       </div>
     </header>
+
+
+
+
 
     <script>
       const openBtn = document.querySelector("#open-menu");
@@ -108,10 +112,9 @@
       });
     </script>
 
-
     <main>
-      <section class="">
-        <div class="flex flex-col items-center gap-5 pt-15 pb-5 px-10">
+      <section class="px-5 md:px-10 lg:px-16">
+        <div class="flex flex-col items-center gap-5 max-w-7xl mx-auto pt-15 pb-5">
           <img src="public/gamma-logo.png" alt="Gamma Logo" class="h-13 w-fit" />
 
           <h1 class="text-3xl font-bold text-center">Effortless AI design for presentations, websites, and more</h1>
@@ -133,7 +136,6 @@
           <img src="public/section1-image3.png" alt="" class="slide image-section1 translate-x-full" />
           <img src="public/section1-image4.png" alt="" class="slide image-section1 translate-x-full" />
         </div>
-
 
         <script>
           const slides = document.querySelectorAll(".slide");
@@ -159,18 +161,15 @@
             slides[next].classList.add("translate-x-0");
 
             setTimeout(() => {
-              // Move the old image back to the right without animation
-              slides[current].classList.remove("-translate-x-full", "transition-transform");
+              slides[current].classList.add("transition-none");
 
+              slides[current].classList.remove("-translate-x-full");
               slides[current].classList.add("translate-x-full");
 
-              // Force browser to apply the reset instantly
               slides[current].offsetHeight;
 
-              // Turn transition back on
-              slides[current].classList.add("transition-transform");
+              slides[current].classList.remove("transition-none");
 
-              // Move to next slide
               current = next;
             }, 700);
           }, 3000);

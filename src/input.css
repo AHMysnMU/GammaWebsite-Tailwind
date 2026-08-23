@@ -10,13 +10,12 @@
   }
 
   .image-section1 {
-    @apply absolute inset-0 w-full h-full object-contain transition-transform duration-700 h-80;
+    @apply absolute inset-0 w-full h-full object-contain transition-transform duration-700;
   }
 }
 
 @theme {
   --breakpoint-bp: 1020px;
-  --breakpoint-img-sec1: 531px;
 }
 
 @layer base {
