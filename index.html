@@ -13,9 +13,9 @@
 
   <body class="bg-white text-blue-950 min-h-[200vh]">
     <header class="bg-white sticky top-0 z-100">
-      <div class="max-w-7xl mx-auto">
+      <div class="max-w-7xl mx-auto px-5 bp:px-10">
         <!--Desktop navbar-->
-        <nav class="hidden bp:flex gap-5 items-center pb-1 pt-2 px-10 mx-auto">
+        <nav class="hidden bp:flex gap-5 items-center pb-1 pt-2 mx-auto">
           <a href=""><img src="public/gamma.png" alt="Gamma Logo" class="h-6.5" /></a>
 
           <div class="me-auto">
@@ -43,7 +43,7 @@
         </nav>
 
         <!--Mobile Top navbar-->
-        <nav class="flex bp:hidden items-center py-1 px-5 mx-auto">
+        <nav class="flex bp:hidden items-center py-1 mx-auto">
           <div class="me-auto">
             <a href=""><img src="public/gamma.png" alt="Gamma Logo" class="h-7 inline" /></a>
           </div>
@@ -94,10 +94,6 @@
       </div>
     </header>
 
-
-
-
-
     <script>
       const openBtn = document.querySelector("#open-menu");
       const closeBtn = document.querySelector("#close-menu");
@@ -113,68 +109,80 @@
     </script>
 
     <main>
-      <section class="px-5 md:px-10 lg:px-16">
-        <div class="flex flex-col items-center gap-5 max-w-7xl mx-auto pt-15 pb-5">
-          <img src="public/gamma-logo.png" alt="Gamma Logo" class="h-13 w-fit" />
+      <!--Section 1-->
+      <section class="w-full bp:h-[660px]">
+        <div class="max-w-7xl mx-auto flex flex-col px-5 bp:h-full bp:px-10 bp:flex-row bp:items-center bp:gap-3">
+          <div class="flex flex-col items-center gap-5 w-full pt-15 pb-5 bp:w-[35%] bp:h-full bp:justify-center bp:gap-8 bp:pb-7 bp:pt-0 bp:items-start">
+            <img src="public/gamma-logo.png" alt="Gamma Logo" class="h-13 w-fit bp:h-17" />
 
-          <h1 class="text-3xl font-bold text-center">Effortless AI design for presentations, websites, and more</h1>
+            <h1 class="text-3xl font-bold text-center bp:text-left bp:text-5xl">Effortless AI design for presentations, websites, and more</h1>
 
-          <p class="text-center">
-            Your ideas are brilliant. The universe deserves to see them. A captivating pitch deck? Easy. A stunning website? Done. Make anything you can imagine almost as quickly as you can think it
-            up.
-          </p>
+            <p class="text-center text-gray-500 bp:text-left bp:text-base">
+              Your ideas are brilliant. The universe deserves to see them. A captivating pitch deck? Easy. A stunning website? Done. Make anything you can imagine almost as quickly as you can think it
+              up.
+            </p>
 
-          <div class="flex flex-col w-full gap-2">
-            <a href="" class="py-2 px-5 w-full text-center bg-blue-900 text-white shadow rounded-full">Start for free</a>
-            <button class="py-2 px-5 w-full text-center bg-white shadow rounded-full">Watch video</button>
+            <div class="flex flex-col w-full gap-2 bp:flex-row">
+              <a href="" class="py-2 px-5 w-full text-center bg-blue-900 text-white shadow rounded-full bp:w-auto bp:px-9">Start for free</a>
+              <button class="py-2 px-5 w-full text-center bg-white shadow rounded-full bp:w-auto bp:px-9">Watch video</button>
+            </div>
+          </div>
+
+          <div class="relative w-full aspect-[4/3] overflow-hidden bp:hidden">
+            <img src="public/section1-image1.png" alt="" class="slide image-section1-mobile translate-x-0 z-10" />
+            <img src="public/section1-image2.png" alt="" class="slide image-section1-mobile translate-x-full" />
+            <img src="public/section1-image3.png" alt="" class="slide image-section1-mobile translate-x-full" />
+            <img src="public/section1-image4.png" alt="" class="slide image-section1-mobile translate-x-full" />
+          </div>
+
+          
+          <div class="hidden bp:block relative bp:flex-1 bp:h-full overflow-y-auto h-full [mask-image:linear-gradient(to_bottom,transparent,black_5%,black_95%,transparent)]">
+            <img src="public/section1-image1.png" alt="" class="image-section1-desktop" />
+            <img src="public/section1-image2.png" alt="" class="image-section1-desktop" />
+            <img src="public/section1-image3.png" alt="" class="image-section1-desktop" />
+            <img src="public/section1-image4.png" alt="" class="image-section1-desktop" />
           </div>
         </div>
-
-        <div class="relative w-full aspect-[4/3] overflow-hidden p-4 pt-2">
-          <img src="public/section1-image1.png" alt="" class="slide image-section1 translate-x-0 z-10" />
-          <img src="public/section1-image2.png" alt="" class="slide image-section1 translate-x-full" />
-          <img src="public/section1-image3.png" alt="" class="slide image-section1 translate-x-full" />
-          <img src="public/section1-image4.png" alt="" class="slide image-section1 translate-x-full" />
-        </div>
-
-        <script>
-          const slides = document.querySelectorAll(".slide");
-
-          let current = 0;
-
-          // First image starts above the others
-          slides[current].classList.add("z-10");
-
-          setInterval(() => {
-            const next = (current + 1) % slides.length;
-
-            // Put the next image above the current one
-            slides[current].classList.remove("z-10");
-            slides[next].classList.add("z-10");
-
-            // Current image moves to the left
-            slides[current].classList.remove("translate-x-0");
-            slides[current].classList.add("-translate-x-full");
-
-            // Next image enters from the right
-            slides[next].classList.remove("translate-x-full");
-            slides[next].classList.add("translate-x-0");
-
-            setTimeout(() => {
-              slides[current].classList.add("transition-none");
-
-              slides[current].classList.remove("-translate-x-full");
-              slides[current].classList.add("translate-x-full");
-
-              slides[current].offsetHeight;
-
-              slides[current].classList.remove("transition-none");
-
-              current = next;
-            }, 700);
-          }, 3000);
-        </script>
+        
       </section>
     </main>
+
+    <script>
+      const slides = document.querySelectorAll(".slide");
+
+      let current = 0;
+
+      // First image starts above the others
+      slides[current].classList.add("z-10");
+
+      setInterval(() => {
+        const next = (current + 1) % slides.length;
+
+        // Put the next image above the current one
+        slides[current].classList.remove("z-10");
+        slides[next].classList.add("z-10");
+
+        // Current image moves to the left
+        slides[current].classList.remove("translate-x-0");
+        slides[current].classList.add("-translate-x-full");
+
+        // Next image enters from the right
+        slides[next].classList.remove("translate-x-full");
+        slides[next].classList.add("translate-x-0");
+
+        setTimeout(() => {
+          slides[current].classList.add("transition-none");
+
+          slides[current].classList.remove("-translate-x-full");
+          slides[current].classList.add("translate-x-full");
+
+          slides[current].offsetHeight;
+
+          slides[current].classList.remove("transition-none");
+
+          current = next;
+        }, 700);
+      }, 3000);
+    </script>
   </body>
 </html>

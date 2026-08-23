@@ -9,8 +9,11 @@
     @apply w-full block text-blue-950 py-2.5 px-8 font-bold;
   }
 
-  .image-section1 {
-    @apply absolute inset-0 w-full h-full object-contain transition-transform duration-700;
+  .image-section1-mobile{
+    @apply absolute inset-0 w-full h-full object-contain transition-transform duration-700 ;
+  }
+  .image-section1-desktop{
+    @apply w-full h-auto ;
   }
 }
 
