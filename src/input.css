@@ -9,11 +9,21 @@
     @apply w-full block text-blue-950 py-2.5 px-8 font-bold;
   }
 
-  .image-section1-mobile{
-    @apply absolute inset-0 w-full h-full object-contain transition-transform duration-700 ;
+  .image-section1-mobile {
+    @apply absolute inset-0 w-full h-full object-contain transition-transform duration-700;
   }
-  .image-section1-desktop{
-    @apply w-full h-auto ;
+  .image-section1-desktop {
+    @apply w-full h-auto;
+  }
+
+  .anchor-section2 {
+    @apply flex flex-col gap-4 items-center  snap-center  basis-[100%] shrink-0 py-8 px-5 bg-white rounded-2xl;
+  }
+  .image-section2-mobile {
+    @apply w-full aspect-[2/1] object-contain;
+  }
+  .text-div-section2-mobile {
+    @apply flex flex-col gap-2 w-full;
   }
 }
 
