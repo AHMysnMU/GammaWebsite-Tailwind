@@ -17,13 +17,13 @@
   }
 
   .anchor-section2 {
-    @apply flex flex-col gap-4 items-center  snap-center  basis-[100%] shrink-0 py-8 px-5 bg-white rounded-2xl;
+    @apply flex flex-col gap-4 items-center  snap-center  basis-[100%] shrink-0 py-8 px-5 bg-white rounded-2xl   bp:py-2 bp:flex-row bp:w-full bp:justify-start ;
   }
   .image-section2-mobile {
-    @apply w-full aspect-[2/1] object-contain;
+    @apply w-full aspect-[2/1] object-contain bp:w-[35%] bp:h-auto bp:aspect-auto;
   }
   .text-div-section2-mobile {
-    @apply flex flex-col gap-2 w-full;
+    @apply flex flex-col gap-2 w-full bp:flex-1;
   }
 }
 
