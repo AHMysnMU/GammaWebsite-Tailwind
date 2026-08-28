@@ -17,7 +17,7 @@
   }
 
   .anchor-section2 {
-    @apply flex flex-col gap-4 items-center  snap-center  basis-[100%] shrink-0 py-8 px-5 bg-white rounded-2xl   bp:py-2 bp:flex-row bp:w-full bp:justify-start;
+    @apply flex flex-col gap-4 items-center  snap-center  basis-[100%] shrink-0 py-8 px-5 bg-white rounded-2xl hover:scale-110 transition-transform duration-300  bp:py-2 bp:flex-row bp:w-full bp:justify-start;
   }
   .image-section2-mobile {
     @apply w-full aspect-[2/1] object-contain bp:w-[35%] bp:h-auto bp:aspect-auto;
