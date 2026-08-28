@@ -12,11 +12,11 @@
   </head>
 
   <body class="bg-white text-blue-950 min-h-[200vh]">
-    <header class="bg-white sticky top-0 z-100">
+    <header class="bg-white/90 sticky top-0 z-100">
       <div class="max-w-7xl mx-auto px-5 bp:px-10">
         <!--Desktop navbar-->
         <nav class="hidden bp:flex gap-5 items-center pb-1 pt-2 mx-auto">
-          <a href=""><img src="public/gamma.png" alt="Gamma Logo" class="h-6.5" /></a>
+          <a href=""><img src="public/header/gamma.png" alt="Gamma Logo" class="h-6.5" /></a>
 
           <div class="me-auto">
             <ul class="flex items-center gap-1">
@@ -45,7 +45,7 @@
         <!--Mobile Top navbar-->
         <nav class="flex bp:hidden items-center py-1 mx-auto">
           <div class="me-auto">
-            <a href=""><img src="public/gamma.png" alt="Gamma Logo" class="h-7 inline" /></a>
+            <a href=""><img src="public/header/gamma.png" alt="Gamma Logo" class="h-7 inline" /></a>
           </div>
 
           <div class="flex justify-center items-center text-2xl">
@@ -63,7 +63,7 @@
         <nav id="mobile-menu" class="bp:hidden fixed inset-0 z-50 flex flex-col -translate-y-full transition-transform duration-500 ease-in-out bg-linear-to-b from-white to-blue-300/96">
           <div class="flex items-center py-1 px-5 bg-white w-full">
             <a href="" class="me-auto">
-              <img src="public/gamma.png" alt="Gamma Logo" class="h-7" />
+              <img src="public/header/gamma.png" alt="Gamma Logo" class="h-7" />
             </a>
 
             <button id="close-menu" class="btn text-2xl px-2 mt-1 flex items-center justify-center">
@@ -112,10 +112,9 @@
       <!--Section 1-->
       <section class="bg-white w-full bp:h-[660px]">
         <div class="max-w-7xl mx-auto flex flex-col px-5 bp:h-full bp:px-10 bp:flex-row bp:items-center bp:gap-3">
-
           <!--Responsive div-->
           <div class="flex flex-col items-center gap-5 w-full pt-15 pb-5 bp:w-[35%] bp:h-full bp:justify-center bp:gap-8 bp:pb-7 bp:pt-0 bp:items-start">
-            <img src="public/gamma-logo.png" alt="Gamma Logo" class="h-13 w-fit bp:h-17" />
+            <img src="public/section1/gamma-logo.png" alt="Gamma Logo" class="h-13 w-fit bp:h-17" />
 
             <h1 class="text-3xl font-bold text-center bp:text-left bp:text-5xl">Effortless AI design for presentations, websites, and more</h1>
 
@@ -139,7 +138,7 @@
           </div>
 
           <!--Desktop image version-->
-          <div class="hidden bp:block relative bp:flex-1 bp:h-full overflow-y-auto h-full [mask-image:linear-gradient(to_bottom,transparent,black_5%,black_95%,transparent)]">
+          <div class="hidden bp:block relative bp:flex-1 bp:h-full overflow-y-auto snap-y snap-mandatory h-full [mask-image:linear-gradient(to_bottom,transparent,black_5%,black_95%,transparent)]">
             <img src="public/section1/image1.png" alt="" class="image-section1-desktop" />
             <img src="public/section1/image2.png" alt="" class="image-section1-desktop" />
             <img src="public/section1/image3.png" alt="" class="image-section1-desktop" />
@@ -150,8 +149,7 @@
 
       <!--Section 2-->
       <section class="bg-linear-to-b from-blue-300 from-60% to-white w-full py-10">
-
-        <div class="max-w-7xl mx-auto flex gap-3 overflow-x-auto snap-x snap-mandatory py-3 px-10    bp:grid bp:grid-cols-2 bp:grid-rows-3 bp:grid-flow-col bp:overflow-x-visible">
+        <div class="max-w-7xl mx-auto flex gap-3 overflow-x-auto snap-x snap-mandatory py-3 px-10 bp:grid bp:grid-cols-2 bp:grid-rows-3 bp:grid-flow-col bp:overflow-x-visible">
           <a href="" class="anchor-section2">
             <img src="public/section2/image1.png" alt="" class="image-section2-mobile" />
             <div class="text-div-section2-mobile">
@@ -199,10 +197,97 @@
             </div>
           </a>
         </div>
-
       </section>
-
     </main>
+
+    <footer class="relative overflow-hidden">
+
+      <video autoplay muted loop playsinline aria-hidden="true" class="absolute inset-0 w-full h-full object-cover pointer-events-none">
+        <source src="public/footer/space-bg-video.mp4" type="video/mp4">
+      </video>
+
+      <div class="absolute inset-0 bg-linear-to-b from-blue-950/70 from-0% via-indigo-900/70 via-20% to-blue-300/70 to-100%  pointer-events-none "></div>
+
+      <div class="relative z-10 text-white py-10">
+        <div class="max-w-7xl mx-auto py-3 px-5 flex flex-col gap-15">
+          <img src="public/footer/footer-logo-gradient-565fc8e9.svg" alt="" class="w-full object-contain opacity-40" />
+
+          <hr />
+
+          <div class="grid grid-cols-2 gap-10 items-start bp:grid-cols-5">
+            <div class="footer-divs col-span-full bp:col-span-1">
+              <h3 class="footer-h3 bp:text-center">Get the app</h3>
+              <div class="flex flex-wrap gap-2 items-center w-full bp:flex-col bp:items-center">
+                <img src="public/footer/app-store-badge.svg" alt="" class="h-8 w-auto" />
+                <img src="public/footer/Google-Play-badge.png" alt="" class="h-12 w-auto" />
+              </div>
+            </div>
+
+            <div class="footer-divs">
+              <h3 class="footer-h3">Product</h3>
+              <ul class="footer-ul">
+                <li><a href="" class="footer-links">Pricing</a></li>
+                <li><a href="" class="footer-links">Inspiration</a></li>
+                <li><a href="" class="footer-links">Education</a></li>
+                <li><a href="" class="footer-links">Prompt guide</a></li>
+                <li><a href="" class="footer-links">Insights</a></li>
+                <li><a href="" class="footer-links">Templates</a></li>
+                <li><a href="" class="footer-links">Explore</a></li>
+                <li><a href="" class="footer-links">Integrations</a></li>
+                <li><a href="" class="footer-links">Accessibility</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-divs">
+              <h3 class="footer-h3">Company</h3>
+              <ul class="footer-ul">
+                <li><a href="" class="footer-links">About</a></li>
+                <li><a href="" class="footer-links">Careers</a></li>
+                <li><a href="" class="footer-links">Team</a></li>
+                <li><a href="" class="footer-links">Help</a></li>
+                <li><a href="" class="footer-links">Community</a></li>
+                <li><a href="" class="footer-links">Developer docs</a></li>
+                <li><a href="" class="footer-links">Brand</a></li>
+                <li><a href="" class="footer-links">Security</a></li>
+                <li><a href="" class="footer-links">Contact us</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-divs">
+              <h3 class="footer-h3">Social</h3>
+              <ul class="footer-ul">
+                <li><a href="" class="footer-links">Instagram</a></li>
+                <li><a href="" class="footer-links">LinkedIn</a></li>
+                <li><a href="" class="footer-links">TikTok</a></li>
+                <li><a href="" class="footer-links">X</a></li>
+                <li><a href="" class="footer-links">YouTube</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-divs">
+              <h3 class="footer-h3">Legal</h3>
+              <ul class="footer-ul">
+                <li><a href="" class="footer-links">Acceptable Use Policy</a></li>
+                <li><a href="" class="footer-links">Cookie Notice</a></li>
+                <li><a href="" class="footer-links">Cookie Preferences</a></li>
+                <li><a href="" class="footer-links">Data Processing Addendum</a></li>
+                <li><a href="" class="footer-links">Privacy Policy</a></li>
+                <li><a href="" class="footer-links">Subprocessors</a></li>
+                <li><a href="" class="footer-links">Terms of Service</a></li>
+                <li><a href="" class="footer-links">Third Party Terms</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="text-right">@ 2026 Gamma Tech, Inc.</p>
+        </div>
+      </div>
+
+
+      
+
+
+    </footer>
 
     <script>
       const slides = document.querySelectorAll(".slide");
